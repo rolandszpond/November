@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d08bdf1516daa45bfadf644735b542, type: 3}
+  m_Name: BuildCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::BuildCatalog
+  cellSize: 2.5
+  cornerMarker: {fileID: 7567519678023432404, guid: 3c3333a360e049e459c73b3ca0afec89, type: 3}
+  walls:
+  - id: wall
+    displayName: Wall
+    prefab: {fileID: 1314183909916261615, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
+  - id: wall_door
+    displayName: Door
+    prefab: {fileID: 1090055365757069019, guid: b00e173b113716a458e7d028b5a22a6e, type: 3}
+  - id: wall_window
+    displayName: Window
+    prefab: {fileID: 1575485029253254693, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
+  - id: wall_window_double
+    displayName: Wide Window
+    prefab: {fileID: 2095505155170527388, guid: c5c2a8e6bf649504c9a44506e4e45bd9, type: 3}
+  - id: wall_half
+    displayName: Half Wall
+    prefab: {fileID: 4806908438423097214, guid: cab317b0dd5752d4a8f2276080d2a178, type: 3}
+  floors:
+  - id: floor
+    displayName: Floor
+    prefab: {fileID: 5790725157781373215, guid: 80278570906458d499abd6aa3ef03fc3, type: 3}
+  objects:
+  - id: chair
+    displayName: Chair
+    prefab: {fileID: 4655428122252159713, guid: adcff36b55f7dee48a7f4bd1ee182e74, type: 3}
+  - id: table
+    displayName: Table
+    prefab: {fileID: 2234192276595900150, guid: 64f4594a7237f5c4bba17f2e2e903b2d, type: 3}
+  - id: shelf
+    displayName: Shelf
+    prefab: {fileID: 7362289287639868535, guid: 1ae87c67129ef334bbf026ee4eadc50e, type: 3}
+  - id: chest
+    displayName: Chest
+    prefab: {fileID: 4003603189485666069, guid: d2d1684b47b3c254ca653563fce46e21, type: 3}
+  - id: crate
+    displayName: Crate
+    prefab: {fileID: 1414887969237499401, guid: 6e3cfe8cda1ce5449b002fd1348507fc, type: 3}
+  - id: barrel
+    displayName: Barrel
+    prefab: {fileID: 5781694286754335005, guid: d0576d52436bc0c4eb18c7a25ddfcdf3, type: 3}
