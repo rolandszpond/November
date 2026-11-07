@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7fb96cda578f64ba5a29389008ee8a, type: 3}
+  m_Name: log
+  m_EditorClassIdentifier: Inventory.Core::ItemDefinition
+  id: log
+  displayName: Log
+  description: A heavy log. Cut it into planks at a workbench.
+  icon: {fileID: 21300000, guid: 7a7548fc4e1cc414cb47208619364b53, type: 3}
+  categories: 3
+  maxStack: 10
+  weight: 2
+  worldPrefab: {fileID: 1480531524279832838, guid: 3e650bba3bae09541be841308573126d, type: 3}
+  worldScale: 0.219
+  tool:
+    enabled: 0
+    toolType: 0
+    gatherPower: 1
+  weapon:
+    enabled: 0
+    damage: 10
+    attackRate: 1
+  food:
+    enabled: 0
+    nutrition: 10
+  backpack:
+    enabled: 0
+    slots: 8
+    carryWeightBonus: 20
+  placeable:
+    enabled: 0
+    placedPrefab: {fileID: 0}

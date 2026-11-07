@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7fb96cda578f64ba5a29389008ee8a, type: 3}
+  m_Name: workbench
+  m_EditorClassIdentifier: Inventory.Core::ItemDefinition
+  id: workbench
+  displayName: Workbench
+  description: Place it, then use it to craft planks, tools and bigger backpacks.
+  icon: {fileID: 21300000, guid: 0c633b273537d0446bb6d8cdbc99c0fe, type: 3}
+  categories: 66
+  maxStack: 1
+  weight: 10
+  worldPrefab: {fileID: 2234192276595900150, guid: 64f4594a7237f5c4bba17f2e2e903b2d, type: 3}
+  worldScale: 0.285
+  tool:
+    enabled: 0
+    toolType: 0
+    gatherPower: 1
+  weapon:
+    enabled: 0
+    damage: 10
+    attackRate: 1
+  food:
+    enabled: 0
+    nutrition: 10
+  backpack:
+    enabled: 0
+    slots: 8
+    carryWeightBonus: 20
+  placeable:
+    enabled: 1
+    placedPrefab: {fileID: 4771300270721495760, guid: e29944c9c87582a459aa4e6cd3d8bf0d, type: 3}

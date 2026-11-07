@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7fb96cda578f64ba5a29389008ee8a, type: 3}
+  m_Name: stone_pickaxe
+  m_EditorClassIdentifier: Inventory.Core::ItemDefinition
+  id: stone_pickaxe
+  displayName: Stone Pickaxe
+  description: Breaks rocks and ore.
+  icon: {fileID: 21300000, guid: 57a124db9a96d684ea1d11909cda674a, type: 3}
+  categories: 12
+  maxStack: 1
+  weight: 3
+  worldPrefab: {fileID: 203093951140853599, guid: 02233d3c799d9b746bcfa1a8b34a3ade, type: 3}
+  worldScale: 1.085
+  tool:
+    enabled: 1
+    toolType: 2
+    gatherPower: 1
+  weapon:
+    enabled: 1
+    damage: 12
+    attackRate: 1
+  food:
+    enabled: 0
+    nutrition: 10
+  backpack:
+    enabled: 0
+    slots: 8
+    carryWeightBonus: 20
+  placeable:
+    enabled: 0
+    placedPrefab: {fileID: 0}

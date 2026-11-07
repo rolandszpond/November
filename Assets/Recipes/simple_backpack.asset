@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a585c0e4f17ad1848a51106cdf6afbfc, type: 3}
+  m_Name: simple_backpack
+  m_EditorClassIdentifier: Inventory.Core::RecipeDefinition
+  id: simple_backpack
+  output: {fileID: 11400000, guid: 5ae9c388348502045bc9099549aae4ba, type: 2}
+  outputCount: 1
+  ingredients:
+  - item: {fileID: 11400000, guid: fdf7aa57079cc93448b13ab27617cd8a, type: 2}
+    count: 10
+  - item: {fileID: 11400000, guid: 54f358c3efe42ce46a56dafae74f5fe6, type: 2}
+    count: 4
+  station: 0
+  recyclable: 1
+  recycleReturn: 0.5
+  recycleOverride: []

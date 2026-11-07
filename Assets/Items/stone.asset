@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7fb96cda578f64ba5a29389008ee8a, type: 3}
+  m_Name: stone
+  m_EditorClassIdentifier: Inventory.Core::ItemDefinition
+  id: stone
+  displayName: Stone
+  description: A fist-sized stone.
+  icon: {fileID: 21300000, guid: 0cf63a15ecdb9ee41a677563ab50208a, type: 3}
+  categories: 1
+  maxStack: 20
+  weight: 0.5
+  worldPrefab: {fileID: 8294394904559025366, guid: 259516b1bf743f84aba64a77847b9d06, type: 3}
+  worldScale: 0.377
+  tool:
+    enabled: 0
+    toolType: 0
+    gatherPower: 1
+  weapon:
+    enabled: 0
+    damage: 10
+    attackRate: 1
+  food:
+    enabled: 0
+    nutrition: 10
+  backpack:
+    enabled: 0
+    slots: 8
+    carryWeightBonus: 20
+  placeable:
+    enabled: 0
+    placedPrefab: {fileID: 0}

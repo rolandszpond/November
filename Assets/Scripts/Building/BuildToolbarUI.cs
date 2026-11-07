@@ -101,8 +101,8 @@ public class BuildToolbarUI : MonoBehaviour
             return;
         }
 
-        EnsureEventSystem();
-        font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        UIUtil.EnsureEventSystem();
+        font =Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
         canvasRoot = new GameObject("Build Toolbar", typeof(RectTransform));
         canvasRoot.transform.SetParent(transform, false);
@@ -143,17 +143,6 @@ public class BuildToolbarUI : MonoBehaviour
             Image image = CreateButton(toolRow, tool.Name, 150f, () => build.SetTool(captured));
             toolButtons.Add((image, tool));
         }
-    }
-
-    private static void EnsureEventSystem()
-    {
-        if (FindAnyObjectByType<EventSystem>() != null)
-        {
-            return;
-        }
-
-        var eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
-        DontDestroyOnLoad(eventSystem);
     }
 
     private RectTransform CreateRow(RectTransform parent, string name)

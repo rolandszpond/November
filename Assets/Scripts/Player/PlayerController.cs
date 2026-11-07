@@ -25,6 +25,11 @@ public partial class PlayerController : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 2f;
     [SerializeField] private float rotationSpeed = 10f;
 
+    [Header("Carry Weight")]
+    [Tooltip("Optional. While carrying more than its max weight the player can't sprint and moves slower.")]
+    [SerializeField] private PlayerInventory inventory;
+    [SerializeField, Range(0.1f, 1f)] private float encumberedSpeedMultiplier = 0.6f;
+
     [Header("Turn In Place")]
     [Tooltip("Angle (degrees) between character and camera before the character turns to face the camera while idle.")]
     [SerializeField] private float turnInPlaceThreshold = 45f;
@@ -108,6 +113,11 @@ public partial class PlayerController : MonoBehaviour
 
         // Root motion is handled in OnAnimatorMove (turn-in-place rotation, slide distance).
         animator.applyRootMotion = true;
+
+        if (inventory == null)
+        {
+            inventory = GetComponent<PlayerInventory>();
+        }
 
         controller = GetComponent<CharacterController>();
         standingHeight = controller.height;
@@ -333,9 +343,19 @@ public partial class PlayerController : MonoBehaviour
         bool hasInput = moveDirection.sqrMagnitude > 0.0001f;
 
         // Keep momentum in the air; otherwise blend toward sprint, walk (toggled) or run (default) speed.
+        bool encumbered = inventory != null && inventory.IsOverencumbered;
+        if (encumbered)
+        {
+            isSprinting = false;
+        }
+
         if (IsGrounded)
         {
             float targetMaxSpeed = isCrouching ? crouchSpeed : isSprinting ? sprintSpeed : isWalking ? walkSpeed : runSpeed;
+            if (encumbered)
+            {
+                targetMaxSpeed *= encumberedSpeedMultiplier;
+            }
             currentMaxSpeed = Mathf.Lerp(currentMaxSpeed, targetMaxSpeed, AnimationDampTime * Time.deltaTime);
         }
 
